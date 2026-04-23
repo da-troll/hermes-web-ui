@@ -1,0 +1,20 @@
+{
+  "inspired_by": "EKKOLearnAI/hermes-web-ui",
+  "project_name": "Agent Hermes",
+  "description": "Read-only inspector for the five Claude Code agents in the Tollefsen household (Eve, Wilson, Pepper, Radar, C-3PO). Surfaces live session transcripts, 7-day token usage, cross-agent search, and bridge session registry — the multi-channel framing of upstream Hermes reimagined as multi-agent, multi-session for a single-user household stack.",
+  "tech_stack": ["Node.js", "Express", "pm2", "vanilla JS", "ClawDash bridge session map", "Claude Code JSONL transcripts"],
+  "build_date": "2026-04-23",
+  "build_time_hours": 4,
+  "status": "complete",
+  "visibility": "private",
+  "features": [
+    "Live agent grid — 5 cards with avatar, status, last-activity timestamp, tokens-today total",
+    "Per-agent session rail — every key in bridge-session-map.json (main, web-*, heartbeat, cron) sorted by recency",
+    "Transcript viewer — tails session JSONL, renders user/assistant turns, folds tool calls",
+    "7-day token-usage sparkline — inline SVG per agent from JSONL usage blocks",
+    "Cross-agent search — ripgrep over all agent transcript dirs, JSON-parsed previews",
+    "Read-only by design — no session control, no write paths, safe to leave open"
+  ],
+  "live_url": "https://mvp.trollefsen.com/2026-04-23-hermes-web-ui/",
+  "github_url": "https://github.com/da-troll/hermes-web-ui"
+}

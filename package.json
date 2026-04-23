@@ -1,0 +1,13 @@
+{
+  "name": "hermes-web-ui",
+  "version": "1.0.0",
+  "description": "Household Agent Session Inspector — read-only dashboard for the Tollefsen five-agent stack",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}

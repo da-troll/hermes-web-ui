@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Hermes</title>
+<meta name="description" content="Read-only inspector for the Tollefsen household's five Claude Code agents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./hermes.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="top__brand">
+    <span class="top__mark">⌘</span>
+    <strong>Agent Hermes</strong>
+    <span class="top__tag">household session inspector</span>
+  </div>
+  <div class="top__meta">
+    <input id="search" type="search" placeholder="search across all agents…" autocomplete="off">
+    <span id="status" class="status status--idle">idle</span>
+  </div>
+</header>
+
+<div id="searchResults" class="search-results" hidden></div>
+
+<div class="layout">
+  <aside class="panel panel--agents" aria-label="Agents">
+    <h2 class="panel__title">Agents</h2>
+    <div id="agentGrid" class="agent-grid"><div class="empty">loading…</div></div>
+  </aside>
+
+  <aside class="panel panel--sessions" aria-label="Sessions">
+    <h2 class="panel__title">Sessions <span id="agentLabel" class="muted"></span></h2>
+    <div id="sessionList" class="session-list"><div class="empty">select an agent</div></div>
+    <div class="usage-box">
+      <div class="usage-box__label">7-day tokens</div>
+      <div id="sparkline" class="sparkline"></div>
+    </div>
+  </aside>
+
+  <main class="panel panel--transcript" aria-label="Transcript">
+    <div class="transcript-bar">
+      <span id="transcriptLabel" class="muted">no session selected</span>
+      <span class="spacer"></span>
+      <button id="btnRefresh" class="mini" type="button">Refresh</button>
+    </div>
+    <div id="transcript" class="transcript"><div class="empty">pick a session on the left</div></div>
+  </main>
+</div>
+
+<script src="./hermes.js" type="module"></script>
+</body>
+</html>

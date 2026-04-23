@@ -305,6 +305,6 @@ app.get("/api/search", async (req, res) => {
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(PORT, "127.0.0.1", () => {
-  console.log(`hermes-web-ui listening on http://127.0.0.1:${PORT}`);
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`hermes-web-ui listening on :${PORT}`);
 });
